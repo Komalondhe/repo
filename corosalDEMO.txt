@@ -1,0 +1,73 @@
+[4:36 PM] Maria (Unverified)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- #region Head tag with Bootsrap CSS File -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <title>Carousel in Bootstrap</title>
+ 
+    <!-- #endregion -->
+    <style>
+      /* .carousel-item img {
+        height: 300px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container my-3">
+      <h5 class="text-danger py-2 mt-3">Carousel in Bootstrap</h5>
+      <p class="text-success border-bottom py-2 mt-3 fw-semibold">Basic Carousel Example</p>
+ 
+      <div class="carousel slide carousel-fade" id="slider1" data-bs-ride="carousel">
+        <!-- <div class="carousel-indicators">
+          <button type="button" data-bs-slide-to="0" data-bs-target="#slider1"></button>
+          <button type="button" data-bs-slide-to="1" data-bs-target="#slider1" class="active"></button>
+          <button type="button" data-bs-slide-to="2" data-bs-target="#slider1"></button>
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="100">
+            <img src="images/1.jpg" alt="..." class="d-block w-100" />
+            <!-- <div class="carousel-caption d-none d-md-block">
+              <h5>Sample Slide 1</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, animi?</p>
+            </div> -->
+          </div>
+          <div class="carousel-item" data-bs-interval="100">
+            <img src="images/2.jpg " alt="..." class="d-block w-100" />
+            <!-- <div class="carousel-caption d-none d-md-block">
+              <h5>Sample Slide 2</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, animi?</p>
+            </div> -->
+          </div>
+          <div class="carousel-item" data-bs-interval="100">
+            <img src="images/3.jpg" alt="..." class="d-block w-100" />
+            <!-- <div class="carousel-caption d-none d-md-block">
+              <h5>Sample Slide 3</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, animi?</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- <button type="button" class="carousel-control-prev" data-bs-target="#slider1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button type="button" class="carousel-control-next" data-bs-target="#slider1" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button> -->
+      </div>
+ 
+      <!--Container End-->
+    </div>
+    <!-- #region Bootsrap js File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- #endregion -->
+  </body>
+</html>
+
