@@ -1,0 +1,38 @@
+package com.Assesment1;
+import java.util.LinkedList;
+import java.util.LinkedList;
+
+class ShoppingCart {
+    LinkedList<String> cart;
+
+    public ShoppingCart() {
+        cart = new LinkedList<>();
+    }
+
+    // Add an item to the cart
+    public void addItem(String item) {
+        cart.add(item);
+        System.out.println(item + " added to the cart.");
+    }
+
+    // Remove an item from the cart
+    public void removeItem(String item) {
+        if (cart.remove(item)) {
+            System.out.println(item + " removed from the cart.");
+        } else {
+            System.out.println(item + " not found in the cart.");
+        }
+    }
+
+    // View all items in the cart
+    public void viewCart() {
+        if (cart.isEmpty()) {
+            System.out.println("The cart is empty.");
+        } else {
+            System.out.println("Items in the cart:");
+            for (String item : cart) {
+                System.out.println("- " + item);
+            }
+        }
+    }
+}
