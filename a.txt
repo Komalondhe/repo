@@ -1,0 +1,72 @@
+package com.Assesment1;
+import java.util.LinkedList;
+import java.util.Queue;
+
+class CustomerService {
+    private Queue<String> serviceRequests;
+
+    public CustomerService() {
+        serviceRequests = new LinkedList<>();
+    }
+
+    // Add a customer service request
+    public void addRequest(String request) {
+        serviceRequests.add(request);
+        System.out.println("Service request added: " + request);
+    }
+
+    // Process the next customer service request
+    public void processRequest() {
+        if (!serviceRequests.isEmpty()) {
+            String request = serviceRequests.poll();
+            System.out.println("Processing request: " + request);
+        } else {
+            System.out.println("No pending service requests.");
+        }
+    }
+
+    // View pending customer service requests
+    public void viewRequests() {
+        if (serviceRequests.isEmpty()) {
+            System.out.println("No pending service requests.");
+        } else {
+            System.out.println("Pending service requests:");
+            for (String request : serviceRequests) {
+                System.out.println("- " + request);
+            }
+        }
+    }
+}
+
+
+public class ShoppingApp {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        PurchaseHistory history = new PurchaseHistory();
+        CustomerService service = new CustomerService();
+
+        // Shopping cart operations
+        cart.addItem("Apple");
+        cart.addItem("Banana");
+        cart.viewCart();
+        cart.removeItem("Apple");
+        cart.viewCart();
+
+        // Purchase history operations
+        history.savePurchase(cart.cart);
+        cart.addItem("Orange");
+        cart.viewCart();
+        history.savePurchase(cart.cart);
+        history.viewHistory();
+        LinkedList<String> lastCart = history.undoLastPurchase();
+        cart.cart = lastCart;
+        cart.viewCart();
+
+        // Customer service operations
+        service.addRequest("Refund request for order #1234");
+        service.addRequest("Inquiry about product #5678");
+        service.viewRequests();
+        service.processRequest();
+        service.viewRequests();
+    }
+}
